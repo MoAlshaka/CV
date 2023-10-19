@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CVController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::group(['prefix'=>'cv'],function(){
+
+    Route::get('information',[CVController::class,'info'])->name('cv.info');
+    Route::post('information',[CVController::class,'store'])->name('cv.store');
 });
