@@ -1,0 +1,165 @@
+/* Global Rules */
+* {
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: white;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+body {
+  margin: 0px;
+  background: url(../images/survey-form-background.jpeg) fixed;
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* media */
+
+@media (min-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: 0 20%;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+}
+
+/* the Container */
+.container {
+  background-color: #0c356ae0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+#header {
+  margin-bottom: 20px;
+}
+
+#survey-form {
+  background-color: #279eff;
+  border-radius: 5px;
+  padding: 2.5rem;
+  width: 100%;
+}
+.form-div {
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+#title {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* the Form */
+.normal-input {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  border: 2px solid white;
+  margin-top: 15px;
+  color: black;
+  height: 2.5rem;
+  font-size: 16px;
+  padding: 10px;
+}
+.normal-input:focus {
+  outline: 2px solid #0c356a;
+}
+#dropdown option {
+  color: #0c356a;
+}
+
+label,
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+hr {
+  width: 100%;
+  border: 1px solid #0c356a;
+  margin: 15px 0px;
+}
+.game-li {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  height: 7.3rem;
+}
+
+.group-input {
+  display: flex;
+  column-gap: 15px;
+}
+.group-input > .date-div {
+  width: 100%;
+  margin-top: 5px;
+}
+.group-input > .date-div > input,
+.group-input > .date-div > select {
+  margin-top: 5px;
+}
+.btn {
+  width: 100%;
+  background-color: #85e6c5;
+  border: 2px solid #85e6c5;
+  color: #0c356a;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 3px;
+  height: 40px;
+  font-size: 20px;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.delete {
+  padding: 2px 10px;
+  background-color: #ff5163;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.workExp,
+.skills-sec {
+  margin-bottom: 15px;
+}
+.first {
+  display: none;
+}
+.seperate {
+  width: 100%;
+  border: 1px solid #f0f2f5;
+  margin: 15px 0px;
+}
+button {
+  width: 100%;
+  background-color: #85e6c5;
+  border: 2px solid #85e6c5;
+  color: #0c356a;
+  text-align: center;
+  font-weight: bolder;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+option {
+  background-color: #0c356a;
+}

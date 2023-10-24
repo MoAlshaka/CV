@@ -21,4 +21,5 @@ Route::group(['prefix'=>'cv'],function(){
 
     Route::get('information',[CVController::class,'info'])->name('cv.info');
     Route::post('information',[CVController::class,'store'])->name('cv.store');
+    Route::get('design',[CVController::class,'design1'])->name('cv.design1');
 });

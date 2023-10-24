@@ -13,7 +13,13 @@ class CVController extends Controller
 
    public function store(Request $request){
     $data=$request->all();
+    return $data;
     session(['data' =>$data]);
-    return view('cv.desin')->with(['date'=>$data]);
+    return view('cv.design')->with(['date'=>$data]);
+   }
+
+   public function design1(){
+    $data = session('data');
+    return view('cv.design1')->with(['date'=>$data]);
    }
 }
