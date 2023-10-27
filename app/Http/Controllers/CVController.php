@@ -12,8 +12,31 @@ class CVController extends Controller
    }
 
    public function store(Request $request){
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'date' => 'required|date',
+        'phone' => 'required|string|max:255',
+        'address' => 'required|string|max:255',
+        'institution' => 'required|string|max:255',
+        'degree' => 'required|string|max:255',
+        'areaOfStudy' => 'required|string|max:255',
+        'grade' => 'required|string|max:255',
+        'startEducationDate' => 'required|date',
+        'endEducationDate' => 'required|date',
+        'companyName' => 'required|string|max:255',
+        'position' => 'required|string|max:255',
+        'startDate' => 'required|date',
+        'endDate' => 'required|date',
+        'skill' => 'required|string|max:255',
+        'langName' => 'required|string|max:255',
+        'langLvl' => 'required|string|max:255',
+        'martialStatus' => 'required|string|max:255',
+        'militaryStatus' => 'required|string|max:255',
+        'nationality' => 'required|string|max:255',
+        'comment' => 'required|string|max:255',
+        'image' => 'required|file|mimes:jpg,png,pdf|max:2048'
+    ]);
     $data=$request->all();
-    return $data;
     session(['data' =>$data]);
     return view('cv.design')->with(['date'=>$data]);
    }

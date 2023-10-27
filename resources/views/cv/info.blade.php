@@ -31,9 +31,11 @@
             id="name"
             class="normal-input"
             placeholder="Enter Your Full Name"
-            required
           />
         </div>
+        @error('name')
+            <div class="msg-err">{{ $message }}</div>
+        @enderror
         <hr />
         <div class="form-div">
           <label for="date" id="date-label">Birthday:</label>
@@ -47,6 +49,9 @@
             max="100"
           />
         </div>
+        @error('date')
+            <div class="msg-err">{{ $message }}</div>
+        @enderror
         <hr />
         <div class="form-div">
           <label for="phone" id="phone-label">Phone:</label>
@@ -59,6 +64,9 @@
             required
           />
         </div>
+        @error('phone')
+            <div class="msg-err">{{ $message }}</div>
+        @enderror
         <hr />
         <div class="form-div">
           <label for="adress" id="adress-label">Adress:</label>
@@ -70,9 +78,12 @@
             placeholder="Adress"
           />
         </div>
+        @error('adress')
+            <div class="msg-err">{{ $message }}</div>
+        @enderror
         <hr />
         <div class="form-div">
-          <label for="adress" id="education-label">Education:</label>
+          <label for="education-institution" id="education-label">Education:</label>
           <div class="group-input">
             <input
               type="text"
@@ -81,6 +92,9 @@
               class="normal-input"
               placeholder="Institution"
             />
+            @error('institution')
+                <div class="msg-err">{{ $message }}</div>
+            @enderror
             <input
               type="text"
               name="degree"
@@ -88,6 +102,9 @@
               class="normal-input"
               placeholder="Degree"
             />
+            @error('degree')
+                <div class="msg-err">{{ $message }}</div>
+            @enderror
           </div>
           <div class="group-input">
             <input
@@ -97,6 +114,9 @@
               class="normal-input"
               placeholder="areaOfStudy"
             />
+            @error('areaOfStudy')
+                <div class="msg-err">{{ $message }}</div>
+            @enderror
             <input
               type="text"
               name="grade"
@@ -104,6 +124,9 @@
               class="normal-input"
               placeholder="grade"
             />
+            @error('grade')
+                <div class="msg-err">{{ $message }}</div>
+            @enderror
           </div>
           <div class="group-input">
             <div class="date-div">
@@ -118,18 +141,24 @@
                 max="100"
               />
             </div>
+            @error('startEducationDate')
+                <div class="msg-err">{{ $message }}</div>
+            @enderror
             <div class="date-div">
               <label for="endEducationDate" id="endDate-label">End Date:</label>
               <input
                 type="date"
                 name="endEducationDate"
-                id="endDate"
+                id="endEducationDate"
                 class="normal-input"
                 placeholder="endEducationDate"
                 min="12"
                 max="100"
               />
             </div>
+            @error('endEducationDate')
+                <div class="msg-err">{{ $message }}</div>
+            @enderror
           </div>
         </div>
         <hr />
@@ -147,6 +176,9 @@
                 class="normal-input"
                 placeholder="companyName"
               />
+                @error('companyName')
+                    <div class="msg-err">{{ $message }}</div>
+                @enderror
               <input
                 type="text"
                 name="position"
@@ -154,10 +186,13 @@
                 class="normal-input"
                 placeholder="position"
               />
+                @error('position')
+                    <div class="msg-err">{{ $message }}</div>
+                @enderror
             </div>
             <div class="group-input">
               <div class="date-div">
-                <label for="startDate" id="workStart-label">Start Date:</label>
+                <label for="workStartDate" id="workStart-label">Start Date:</label>
                 <input
                   type="date"
                   name="startDate"
@@ -166,8 +201,11 @@
                   placeholder="startDate"
                 />
               </div>
+                @error('startDate')
+                    <div class="msg-err">{{ $message }}</div>
+                @enderror
               <div class="date-div">
-                <label for="endDate" id="workEnd-label">End Date:</label>
+                <label for="workEndDate" id="workEnd-label">End Date:</label>
                 <input
                   type="date"
                   name="endDate"
@@ -176,6 +214,9 @@
                   placeholder="endDate"
                 />
               </div>
+                @error('endDate')
+                    <div class="msg-err">{{ $message }}</div>
+                @enderror
             </div>
           </div>
           <hr class="seperate" />
@@ -196,6 +237,9 @@
               placeholder="Skill Name"
               required
             />
+            @error('skill')
+                <div class="msg-err">{{ $message }}</div>
+            @enderror
             <hr class="seperate" />
           </div>
         </div>
@@ -219,6 +263,9 @@
                     placeholder="Language"
                   />
                 </div>
+                @error('langName')
+                    <div class="msg-err">{{ $message }}</div>
+                @enderror
                 <div class="date-div">
                   <label for="langLvl" id="langLvl-label"
                     >Language Level:</label
@@ -231,6 +278,9 @@
                     <option value="racing">Native</option>
                   </select>
                 </div>
+                @error('langLvl')
+                    <div class="msg-err">{{ $message }}</div>
+                @enderror
               </div>
               <hr class="seperate" />
             </div>
@@ -247,6 +297,9 @@
             <option value="divorce">divorce</option>
           </select>
         </div>
+        @error('martialStatus')
+            <div class="msg-err">{{ $message }}</div>
+        @enderror
         <hr />
         <div class="form-div">
           <p>Military Status</p>
@@ -261,6 +314,9 @@
             <option value="exempt">exempt</option>
           </select>
         </div>
+        @error('militaryStatus')
+            <div class="msg-err">{{ $message }}</div>
+        @enderror
         <hr />
         <div class="form-div">
           <label for="nationality" id="name-label">Nationality:</label>
@@ -273,6 +329,9 @@
             required
           />
         </div>
+        @error('nationality')
+            <div class="msg-err">{{ $message }}</div>
+        @enderror
         <hr />
         <div class="form-div">
           <p>Summery about Your Self</p>
@@ -282,6 +341,9 @@
             placeholder="Enter Your Comment here..."
           ></textarea>
         </div>
+        @error('commet')
+            <div class="msg-err">{{ $message }}</div>
+        @enderror
         <div class="form-div">
           <button type="submit">Submit</button>
         </div>
