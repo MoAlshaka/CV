@@ -21,7 +21,7 @@
           &quot;What is a man? A miserable little pile of secrets!&quot;
         </p>
       </header>
-      <form action="{{route('cv.info')}}" id="survey-form" method="POST">
+      <form action="{{route('cv.store')}}" id="survey-form" method="POST">
         @csrf
         <div class="form-div">
           <label for="name" id="name-label">Name:</label>
@@ -72,13 +72,13 @@
           <label for="adress" id="adress-label">Adress:</label>
           <input
             type="text"
-            name="adress"
+            name="address"
             id="adress"
             class="normal-input"
             placeholder="Adress"
           />
         </div>
-        @error('adress')
+        @error('address')
             <div class="msg-err">{{ $message }}</div>
         @enderror
         <hr />
@@ -171,7 +171,7 @@
             <div class="group-input">
               <input
                 type="text"
-                name="companyName"
+                name="companyName[]"
                 id="work-companyName"
                 class="normal-input"
                 placeholder="companyName"
@@ -181,7 +181,7 @@
                 @enderror
               <input
                 type="text"
-                name="position"
+                name="position[]"
                 id="work-position"
                 class="normal-input"
                 placeholder="position"
@@ -195,7 +195,7 @@
                 <label for="workStartDate" id="workStart-label">Start Date:</label>
                 <input
                   type="date"
-                  name="startDate"
+                  name="startDate[]"
                   id="workStartDate"
                   class="normal-input"
                   placeholder="startDate"
@@ -208,7 +208,7 @@
                 <label for="workEndDate" id="workEnd-label">End Date:</label>
                 <input
                   type="date"
-                  name="endDate"
+                  name="endDate[]"
                   id="workEndDate"
                   class="normal-input"
                   placeholder="endDate"
@@ -231,7 +231,7 @@
             </div>
             <input
               type="text"
-              name="skill"
+              name="skill[]"
               id="skill"
               class="normal-input"
               placeholder="Skill Name"
@@ -257,7 +257,7 @@
                   <label for="langName" id="langName-label">Name:</label>
                   <input
                     type="text"
-                    name="langName"
+                    name="langName[]"
                     id="langName"
                     class="normal-input"
                     placeholder="Language"
@@ -270,7 +270,7 @@
                   <label for="langLvl" id="langLvl-label"
                     >Language Level:</label
                   >
-                  <select name="langLvl" id="langLvl" class="normal-input">
+                  <select name="langLvl[]" id="langLvl" class="normal-input">
                     <option disabled selected>Select Level</option>
                     <option value="action">Beginner</option>
                     <option value="sandbox">Intermediate</option>

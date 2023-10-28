@@ -30,7 +30,7 @@
                 <div class="inline-flex items-center gap-1 text-xs">
                     <i class="fas fa-map-marker-alt"></i>
                     <!-- العنوان -->
-                    <span>{{ $date['adress'] }}</span>
+                    <span>{{ $date['address'] }}</span>
                 </div>
                 <div class="flex items-center gap-2">
                     <div class="inline-flex items-center gap-1 text-xs">
@@ -67,39 +67,27 @@
                 class="grid items-start gap-4"
                 style="grid-template-columns: repeat(1, minmax(0px, 1fr))"
                 >
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <!-- اسم الشركة -->
-                        <span class="font-semibold">{{ $date['companyName'] }}</span>
-                        <!-- المسمي الوظيفي -->
-                        <span class="opacity-75"
-                        >{{ $date['position'] }}</span
-                        >
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs">
-                        <!-- تاريخ العمل -->
-                        <div class="opacity-50">
-                        ({{ $date['startDate'] }} - {{ $date['endDate'] }})
+                <?php  $i=0; ?>
+                @foreach ($date['companyName'] as $company)
+                    <div class="grid gap-1">
+                        <div class="flex items-start justify-between">
+                            <div class="flex flex-col">
+                                <!-- اسم الشركة -->
+                                <span class="font-semibold">{{ $company }}</span>
+                                <!-- المسمي الوظيفي -->
+                                <span class="opacity-75">{{ $date['position'][$i] }}</span>
+                            </div>
+                            <div class="flex flex-col gap-1 text-right text-xs">
+                                <!-- تاريخ العمل -->
+                                <div class="opacity-50">
+                                    ({{ $date['startDate'][$i] }} - {{ $date['endDate'][$i] }})
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <!-- اسم الشركة -->
-                        <span class="font-semibold">Antar Steel Company</span>
-                        <!-- المسمي الوظيفي -->
-                        <span class="opacity-75">quality technician</span>
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs">
-                        <!-- تاريخ العمل -->
-                        <div class="opacity-50">(May 17, 2022 - Present)</div>
-                    </div>
-                    </div>
-                </div>
-                </div>
+                    <?php  $i++ ?>
+                @endforeach
+
             </section>
             <section>
                 <h4 class="mb-2 font-bold uppercase" style="color: #3f51b5">
@@ -146,72 +134,16 @@
                 class="grid items-start gap-4"
                 style="grid-template-columns: repeat(1, minmax(0px, 1fr))"
                 >
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <span class="font-semibold">{{ $date['skill'] }}</span>
+                @foreach ($date['skill'] as $skill)
+                    <div class="grid gap-1">
+                        <div class="flex items-start justify-between">
+                        <div class="flex flex-col">
+                            <span class="font-semibold">{{ $skill }}</span>
+                        </div>
+                        <div class="flex flex-col gap-1 text-right text-xs"></div>
+                        </div>
                     </div>
-                    <div class="flex flex-col gap-1 text-right text-xs"></div>
-                    </div>
-                </div>
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <span class="font-semibold">Team building</span>
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs"></div>
-                    </div>
-                </div>
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <span class="font-semibold">Problem Solving</span>
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs"></div>
-                    </div>
-                    <div></div>
-                </div>
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <span class="font-semibold">Decision making</span>
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs"></div>
-                    </div>
-                    <div></div>
-                </div>
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <span class="font-semibold">Working under pressure</span>
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs"></div>
-                    </div>
-                    <div></div>
-                </div>
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <span class="font-semibold"
-                        >The ability to manage work professionally</span
-                        >
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs"></div>
-                    </div>
-                    <div></div>
-                </div>
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <span class="font-semibold"
-                        >Ability to deal with Microsoft Office programs (Excel,
-                        Word).</span
-                        >
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs"></div>
-                    </div>
-                    <div></div>
-                </div>
+                @endforeach
                 </div>
             </section>
             <section>
@@ -225,28 +157,21 @@
                 class="grid items-start gap-4"
                 style="grid-template-columns: repeat(2, minmax(0px, 1fr))"
                 >
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <span class="font-semibold">{{ $date['langName'] }}</span>
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs"></div>
-                    </div>
+                <?php  $j=0; ?>
+                @foreach ($date['langName'] as $language )
                     <div class="grid gap-1">
-                    <span class="opacity-75">{{ $date['langLvl'] }}</span>
+                        <div class="flex items-start justify-between">
+                        <div class="flex flex-col">
+                            <span class="font-semibold">{{ $language }}</span>
+                        </div>
+                        <div class="flex flex-col gap-1 text-right text-xs"></div>
+                        </div>
+                        <div class="grid gap-1">
+                        <span class="opacity-75">{{ $date['langLvl'][$j] }}</span>
+                        </div>
                     </div>
-                </div>
-                <div class="grid gap-1">
-                    <div class="flex items-start justify-between">
-                    <div class="flex flex-col">
-                        <span class="font-semibold">English</span>
-                    </div>
-                    <div class="flex flex-col gap-1 text-right text-xs"></div>
-                    </div>
-                    <div class="grid gap-1">
-                    <span class="opacity-75">intermediate</span>
-                    </div>
-                </div>
+                    <?php  $j++ ?>
+                @endforeach
                 </div>
             </section>
             <section>

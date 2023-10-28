@@ -14,14 +14,14 @@ function createWorkExp() {
 <div class="group-input">
 <input
   type="text"
-  name="companyName-${idCounter}"
+  name="companyName[]"
   id="work-companyName-${idCounter}"
   class="normal-input"
   placeholder="companyName"
 />
 <input
   type="text"
-  name="position-${idCounter}"
+  name="position[]"
   id="work-position-${idCounter}"
   class="normal-input"
   placeholder="position"
@@ -32,20 +32,20 @@ function createWorkExp() {
   <label for="startDate" id="workStart-label-${idCounter}">Start Date:</label>
   <input
     type="date"
-    name="startDate-${idCounter}"
+    name="startDate[]"
     id="workStartDate-${idCounter}"
     class="normal-input"
     placeholder="startDate"
   />
 </div>
 <div class="date-div">
-  <label for="startDate" id="workEnd-label-${idCounter}">End Date:</label>
+  <label for="endDate" id="workEnd-label-${idCounter}">End Date:</label>
   <input
     type="date"
-    name="startDate-${idCounter}"
+    name="endDate[]"
     id="workEndDate-${idCounter}"
     class="normal-input"
-    placeholder="startDate"
+    placeholder="endDate"
   />
 </div>
 </div>
@@ -69,7 +69,7 @@ function createSkill() {
 </div>
 <input
   type="text"
-  name="skill-${idCounter}"
+  name="skill[]"
   id="skill-${idCounter}"
   class="normal-input"
   placeholder="Skill Name"
@@ -98,7 +98,7 @@ function createLang() {
     <label for="langName" id="langName-label-${idCounter}">Name:</label>
     <input
       type="text"
-      name="langName-${idCounter}"
+      name="langName[]"
       id="langName-${idCounter}"
       class="normal-input"
       placeholder="Language"
@@ -108,7 +108,7 @@ function createLang() {
     <label for="langLvl" id="langLvl-label-${idCounter}"
       >Language Level:</label
     >
-    <select name="langLvl" id="langLvl-${idCounter}" class="normal-input">
+    <select name="langLvl[]" id="langLvl-${idCounter}" class="normal-input">
       <option disabled selected>Select Level</option>
       <option value="Beginner">Beginner</option>
       <option value="Intermediate">Intermediate</option>
