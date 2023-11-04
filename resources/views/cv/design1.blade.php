@@ -14,8 +14,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="../css/tailwind.css" />
-    <link rel="stylesheet" href="../css/design1.css" />
+    <link rel="stylesheet" href="{{asset('css/tailwind.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/design1.css')}}" />
   </head>
   <body>
     @if(isset($date))

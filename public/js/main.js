@@ -145,3 +145,4 @@ document.addEventListener("click", (e) => {
     deleteWorkExp(e.target);
   }
 });
+

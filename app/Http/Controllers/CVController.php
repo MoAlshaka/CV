@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CvRequest;
 use Illuminate\Http\Request;
+use PDF;
 
 class CVController extends Controller
 {
@@ -58,4 +59,17 @@ class CVController extends Controller
     $data = session('data');
     return view('cv.design')->with(['date'=>$data]);
    }
+
+
+
+//    public function generate_Pdf()
+// {
+//     $pdf = PDF::loadView('cv.design');
+
+//     // You can save the PDF to a file
+//     $pdf->save('Downloads/cv.pdf');
+
+//     // Or you can send it as a response to the browser for download
+//     return $pdf->download('your-pdf-filename.pdf');
+// }
 }
